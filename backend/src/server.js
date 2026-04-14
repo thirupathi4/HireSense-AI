@@ -3,8 +3,10 @@ const app = require("./app")
 const PORT = process.env.PORT || 3000
 
 const connectDB = require("./config/database")
+
 const startServer = async () => {
     await connectDB();
+
     app.listen(PORT, () => {
         console.log("server is running on port", PORT);
     })
